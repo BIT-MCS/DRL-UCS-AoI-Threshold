@@ -31,9 +31,8 @@ Unmanned aerial vehicle (UAV) crowdsensing (UCS) is an emerging data collection 
 Get the usage information of the project
 ```bash
 cd /DRL-UCS-AoI-Th/DRL_UCS_AoI/adept/scripts
-python actorlearner.py -h
 ```
-Then the usage information will be shown as following, more configuration can be found in the default config file [config/default.json]().
+Then the usage information will be shown as following, more configuration can be found in the default config file [config/bj.json]().
 ```
 Distributed Options:
     --nb-learners <int>         Number of distributed learners [default: 1]
@@ -89,11 +88,14 @@ Algorithm Options:
 You can also train from config file using the following command:
 ```
 python actorlearner.py --config ./config/bj.json # for Beijing Dataset
-
+```
+```
 python actorlearner.py --config ./config/sf.json # for San Francisco Dataset
 ```
+
 ## :checkered_flag: Testing
 Get the usage information of testing:
+
 ```
 python evaluate.py -h 
 ```
