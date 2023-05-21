@@ -23,14 +23,15 @@ Unmanned aerial vehicle (UAV) crowdsensing (UCS) is an emerging data collection 
 3. Install dependent packages
     ```
     pip install -r requirements.txt
+    cd DRL-UCS-AoI
     python setup.py develop
     ```
 ## :computer: Training
 
 Get the usage information of the project
 ```bash
-cd mcs
-python train.py -h
+cd /DRL-UCS-AoI-Th/DRL_UCS_AoI/adept/scripts
+python actorlearner.py -h
 ```
 Then the usage information will be shown as following, more configuration can be found in the default config file [config/default.json]().
 ```
@@ -55,6 +56,8 @@ Environment Options:
     --env <str>             Environment name [default: PongNoFrameskip-v4]
     --rwd-norm <str>        Reward normalizer name [default: Clip]
     --manager <str>         Manager to use [default: SubProcEnvManager]
+    --dataset <str>         "beijing" or "sanfrancisco"
+    --nb_agent <int>        Number of agents 
 
 Script Options:
     --nb-env <int>          Number of env per worker [default: 32]
@@ -78,26 +81,21 @@ Logging Options:
     --summary-freq <int>       Tensorboard summary frequency [default: 10]
 
 Algorithm Options:
-    --use-pixel-control                   Use auxiliary task pixel control
-    --pixel-control-loss-gamma <float>    Discount factor for calculate auxiliary loss [default: 0.99]
-    --use-mhra                            Use multi-head-relational-attention for feature extraction 
-    --num-head <int>                      Num of attention head in mhra [default: 4]
-    --minibatch-buffer-size <int>        Num of minibatch buffer size [default: 4]
-    --num-sgd <int>                       Num of update times [default: 1]
-    --target-worker-clip-rho <float>      Clipped IS ratio for target worker [default: 2]
-    --probs-clip <float>                  Advantage Clipped ratio [default: 0.4]
-    --gae-lambda <float>                  Lambda in calculate gae estimation [default: 0.995]
-    --gae-gamma <float>                   Gamma in calculate gae estimation [default: 0.99]
- ```
+    --use_transformer <bool>   Whether use GTrXL
+    --use_intrinsic   <bool>   Whether use RND-controlled intrinsic reward
+    --bg  <float>              b_g in GTrXL
+
+    
 You can also train from config file using the following command:
 ```
-python train.py --config ./config/default.json
+python actorlearner.py --config ./config/bj.json # for Beijing Dataset
+
+python actorlearner.py --config ./config/sf.json # for San Francisco Dataset
 ```
 ## :checkered_flag: Testing
 Get the usage information of testing:
 ```
 python evaluate.py -h 
-```
 ```
 Required:
     --logdir <path>     Path to train logs (.../logs/<env-id>/<log-id>)
@@ -136,4 +134,3 @@ pages = {3679–3687},
 numpages = {9}
 } -->
 
-```

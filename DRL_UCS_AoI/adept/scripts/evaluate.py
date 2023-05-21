@@ -61,7 +61,7 @@ def parse_args():
     del args["help"]
 
     if args['logdir'] == '.':
-        args['logdir']= '/home/liuchi/wh/adeptRL/model_results/ablation/6_all_ActorLearner_ImpalaHostActor_Linear_2022-06-26_20-47-59'
+        args['logdir']= ''
 
     
     args = DotDict(args)
@@ -75,7 +75,7 @@ def parse_args():
 
     args.nb_episode = 1
     if args['logdir'] == '.':
-        args.epoch = 14000640  
+        args.epoch = 0  
         
          
     args.gpu_id = int(args.gpu_id)

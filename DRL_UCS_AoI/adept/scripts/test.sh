@@ -1,1 +1,0 @@
-python evaluate.py --logdir .
