@@ -97,9 +97,9 @@ Get the usage information of testing:
 ```
 python evaluate.py -h 
 ```
+```
 Required:
     --logdir <path>     Path to train logs (.../logs/<env-id>/<log-id>)
-
 Options:
     --epoch <int>           Epoch number to load [default: None]
     --actor <str>           Name of the eval actor [default: ACActorEval]
@@ -121,16 +121,3 @@ This codebase is based on adept and Ray which are open-sourced. Please refer to 
 
 ## :e-mail: Contact
 If you have any question, please email `wanghao@bit.edu.cn`.
-
-<!-- ## Paper
-If you are interested in our work, please cite our paper as
-```
-@inproceedings{10.1145/3447548.3467070,
-author = {Wang, Hao and Liu, Chi Harold and Dai, Zipeng and Tang, Jian and Wang, Guoren},
-title = {Energy-Efficient 3D Vehicular Crowdsourcing for Disaster Response by Distributed Deep Reinforcement Learning},
-doi = {10.1145/3447548.3467070},
-booktitle = {Proceedings of the 27th ACM SIGKDD Conference on Knowledge Discovery & Data Mining},
-pages = {3679–3687},
-numpages = {9}
-} -->
-
