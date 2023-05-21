@@ -83,13 +83,11 @@ Algorithm Options:
     --use_transformer <bool>   Whether use GTrXL
     --use_intrinsic   <bool>   Whether use RND-controlled intrinsic reward
     --bg  <float>              b_g in GTrXL
-
+```
     
 You can also train from config file using the following command:
 ```
 python actorlearner.py --config ./config/bj.json # for Beijing Dataset
-```
-```
 python actorlearner.py --config ./config/sf.json # for San Francisco Dataset
 ```
 
