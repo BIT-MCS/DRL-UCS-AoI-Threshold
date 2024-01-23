@@ -125,12 +125,6 @@ class EnvUCS(EnvModule):
         self.OLD_CLUSTERS_NUM = 1
         self.SINGLE_CLUSTER_NUM = self.POI_NUM
 
-<<<<<<< HEAD
-        for i in range(0, 10):
-            print(i, self._cal_distance((0, 0), (0, i)),
-                  self._get_data_rate((0, 0), (0, i)))
-=======
->>>>>>> ac3d12f4877af33c205f99ac139d78ec10220b20
         if self.ACTION_MODE == 1:
             self.gym_action_space = spaces.Box(min=-1, max=1, shape=(2,))
         elif self.ACTION_MODE == 0:

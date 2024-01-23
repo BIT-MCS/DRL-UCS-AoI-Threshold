@@ -87,8 +87,8 @@ Algorithm Options:
     
 You can also train from config file using the following command:
 ```
-python actorlearner.py --config ./config/bj.json # for Beijing Dataset
-python actorlearner.py --config ./config/sf.json # for San Francisco Dataset
+python actorlearner.py --config ../config/bj.json # for Beijing Dataset
+python actorlearner.py --config ../config/sf.json # for San Francisco Dataset
 ```
 
 ## :checkered_flag: Testing
